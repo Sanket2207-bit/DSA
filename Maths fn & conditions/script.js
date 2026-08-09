@@ -40,7 +40,7 @@ console.log(ab.toFixed(3)); // tofixed function will return exaclty 3 values aft
 
 // Question Practice
 // Q1 Find compount interest of the vales given by user
-CP = A - P (A = p*(1+r/100)^t)
+// CP = A - P (A = p*(1+r/100)^t)
 let p = prompt("Enter principle amount")
 let r = prompt("Enter rate of interest")
 let t = prompt("Enter duration of loan")
@@ -82,3 +82,11 @@ if(int1%2!=0){
 else(
     console.log(`${int1} is even`)
 )
+
+// Q3 Check if User is a Valid Voter (is voter >= 18 valid , otherwise not)
+function abab(voter , age){
+    return age >= 18 ? `${voter} is a valid voter.` : `${voter} is not a valid voter.`
+}
+var fh = abab("sanket" , 19)
+console.log(fh)
+
