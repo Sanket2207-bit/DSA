@@ -9,7 +9,7 @@ helloworld(n)
 
 //  Print natural number up to n. 
 function natnumber(integer){
-    for ( i = 1; i<=integer; i++){
+    for ( let i = 1; i<=integer; i++){
         console.log(i)
     }
 }
@@ -18,7 +18,7 @@ natnumber(m)
 
 //Reverse for loop. Print n to 1
 function revnumber(integer){
-    for (i = integer; i>0 ; i--){
+    for (let i = integer; i>0 ; i--){
         console.log(i)
     }
 }
@@ -29,7 +29,7 @@ revnumber(o)
      5 * 1 = 5
      5 * 2 = 10 ... up to 10 terms */
 function mult(integer){
-    for( i = 1 ; i<=10 ; i++ ){
+    for(let i = 1 ; i<=10 ; i++ ){
         console.log(`${integer} "x" ${i} = ${integer * i}`)
     }
 }
@@ -39,7 +39,7 @@ mult(p)
 //Sum up to n terms
 function sum(n){
    let total = 0
-    for (i = 1 ; i <= n; i++ ){
+    for (let i = 1 ; i <= n; i++ ){
         total +=i;
     }
     return total;
@@ -50,7 +50,7 @@ console.log(sum(t))
 // Factorial of a number
 function fact(n){
     let temp = 1
-    for (i = n ; i >0 ; i--){
+    for (let i = n ; i >0 ; i--){
         temp *=i
     }
     return temp
@@ -61,7 +61,7 @@ console.log(fact(y));
 //Print all the factors of a number.
 function ft(n){
     let temp = []
-    for(i = 1 ; i <= n ; i++){
+    for(let i = 1 ; i <= n ; i++){
         if(n%i == 0){
            temp.push(i);
         }
@@ -70,3 +70,28 @@ function ft(n){
 }
 let u = Number(prompt("Enter a no: "))
 console.log(`Factor of ${u} are: ` ,  ft(u).join(", "));
+
+// Check if the number is Prime or not
+function prime(n){
+    for(let i = 2; i < n ; i++){
+        if(n%i==0){
+            console.log(`${n} is not a prime no`);
+            return;
+        }
+    }
+    console.log(`${n} is a prime no`)
+}
+let i = Number(prompt("Enter your no: "))
+prime(i);
+
+/*  Write a program to take two inputs a, b & find the value of a  raised to the power of b.
+     Ex - a = 2, b = 5 
+     OP - 2^5 = 32 */
+function power(a,b){
+    if ( a === 0 && b <= 0) return undefined;
+    if ( b === 0) return 1;
+    if ( b > 0) return a**b;
+    return 1/((a)**Math.abs(b))
+}
+console.log(power(-8 , -3));
+
