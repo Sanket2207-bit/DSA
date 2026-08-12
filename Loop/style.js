@@ -121,12 +121,12 @@ while (w<=q){
 }
 
 // Sum of digits
-let e = Number(prompt("Enter a no: "))
+let e = Math.abs(Number(prompt("Enter a no: ")))
 sum = 0
 while(e>0){
     rem = e%10;
     sum = sum + rem
-    e = Math.floor(e/10)
+    e = Math.trunc(e/10)
 }
 console.log(sum)
 
@@ -136,7 +136,33 @@ let rev = 0
 while (r>0){
     rem = r%10;
     rev = (rev*10) + rem
-    r = Math.floor(r/10)
+    r = Math.trunch(r/10)
 }
 console.log(rev)
 
+// Automorphic Number
+let aa = Number(prompt("Enter your no: "));
+let dig = String(aa).length
+let sq = (aa*aa)%(Math.pow(10 , dig))
+if (aa === sq){
+    console.log(`${aa} is an automorphic number`);
+}
+else{
+    console.log(`${aa} is not an automorphic number`);
+}
+
+// Strong Number
+let z = Number(prompt("Enter a no: "))
+let origin = z
+let factsum = 0
+while(z > 0){
+    rem = z%10
+    let factrem = 1
+    for(i = rem; i >= 1 ; i--){
+        factrem *= i
+    }
+    factsum = factsum + factrem
+    z = Math.trunc(z/10)
+}
+if (factsum == origin) console.log(`${origin} is a strong number`)
+else console.log(`${origin} is not a strong number`)
