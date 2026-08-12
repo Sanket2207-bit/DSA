@@ -1,3 +1,5 @@
+// For loop questions
+
 // Accept an integer and Print hello world n times
 function helloworld(integer){
      for(let i = 0 ; i < integer ; i++ ){
@@ -94,4 +96,47 @@ function power(a,b){
     return 1/((a)**Math.abs(b))
 }
 console.log(power(-8 , -3));
+
+// use of break statement
+let a = 10;
+for (i = 1 ; i<a ; i++){
+    if(i === 8) break
+    console.log(i)
+}
+
+// use of continue statement
+let b = 10;
+for (i = 1 ; i<b ; i++){
+    if ( i === 3) continue
+    console.log(i); 
+}
+
+// While loop Questions
+// Repeat hello
+let q = 5
+let w = 1
+while (w<=q){
+    console.log("Hello");
+    w++
+}
+
+// Sum of digits
+let e = Number(prompt("Enter a no: "))
+sum = 0
+while(e>0){
+    rem = e%10;
+    sum = sum + rem
+    e = Math.floor(e/10)
+}
+console.log(sum)
+
+// Reverse of number
+let r = Number(prompt("Enter a no to reverse: "))
+let rev = 0
+while (r>0){
+    rem = r%10;
+    rev = (rev*10) + rem
+    r = Math.floor(r/10)
+}
+console.log(rev)
 
