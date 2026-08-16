@@ -166,3 +166,59 @@ while(z > 0){
 }
 if (factsum == origin) console.log(`${origin} is a strong number`)
 else console.log(`${origin} is not a strong number`)
+
+// Do while question
+
+// Repeat hello
+let a = 10
+let i = 1
+do{console.log("hello") ; i++}while(i<a)
+
+let userinput;
+do{
+    console.log("Hello guys");
+    userinput = prompt("DO you want to continue ? yes , no").toLowerCase()
+} while(userinput === "yes")
+
+// Guess the number
+let ab = Math.trunc( Math.random()*100)
+let qw;
+do{
+    qw = Number(prompt("Enter your guess: "));
+    if(ab !== qw) console.log(`Oops! your guess ${qw} is wrong`)
+}while(qw !== ab)
+    console.log(`Hurray! your guess ${qw} is correct`)
+
+// Calculator(very basic)
+let cs;
+let lc;
+let ul;
+let js;
+do{
+    cs = Number(prompt("Enter your first number: "))
+    lc = Number(prompt("Enter your Second number: "))
+    js = prompt("Do you want to perform another operation after this current operation yes or no?")
+    ul = prompt(`Please enter which operation do you want to perform on these no ${cs} and ${lc} + , - , * , /`)
+     if (ul != "+" && ul != "-" && ul != "*" && ul != "/") console.log("Please enter a correct operation")
+    if (ul == "+") console.log(`The Addition of ${cs} and ${lc} is ${cs + lc}` );
+    else if (ul == "-") console.log(`The Subtraction  of ${cs} and ${lc} is ${cs - lc}`);
+    else if (ul == "*") console.log(`The Multiplication of ${cs} and ${lc} is ${cs * lc}`);
+    else console.log(`The Division of ${cs} and ${lc} is ${cs / lc}`);
+}while(js == "yes")
+
+// Sum of Even and Odd Numbers in a Range
+function sumEvenOddInRange(start, end) {
+    let even = [];
+    let odd = [];
+    if (start > end) [start , end] = [end , start]
+    do{
+        if(start % 2 == 0) even.push(start)
+        else odd.push(start)
+        start++
+    }while(start<=end)
+    let evensum = even.reduce((acc , num) => acc + num ,0)
+    let oddsum = odd.reduce((acc , num) => acc + num ,0)
+    return [evensum , oddsum]
+}
+let su = sumEvenOddInRange(2,10);
+console.log(su)
