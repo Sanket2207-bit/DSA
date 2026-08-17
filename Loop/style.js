@@ -9,7 +9,7 @@ function helloworld(integer){
 let n = prompt("Enter a no: ")
 helloworld(n)
 
-//  Print natural number up to n. 
+//  Print natural number up to n.
 function natnumber(integer){
     for ( let i = 1; i<=integer; i++){
         console.log(i)
@@ -87,7 +87,7 @@ let i = Number(prompt("Enter your no: "))
 prime(i);
 
 /*  Write a program to take two inputs a, b & find the value of a  raised to the power of b.
-     Ex - a = 2, b = 5 
+     Ex - a = 2, b = 5
      OP - 2^5 = 32 */
 function power(a,b){
     if ( a === 0 && b <= 0) return undefined;
@@ -108,7 +108,7 @@ for (i = 1 ; i<a ; i++){
 let b = 10;
 for (i = 1 ; i<b ; i++){
     if ( i === 3) continue
-    console.log(i); 
+    console.log(i);
 }
 
 // While loop Questions
@@ -222,3 +222,68 @@ function sumEvenOddInRange(start, end) {
 }
 let su = sumEvenOddInRange(2,10);
 console.log(su)
+
+// Nested Programming
+
+/*
+*
+* *
+* * *
+* * * *
+* * * * * 
+ */
+for (i = 1; i <= 5; i++) {
+  for (j = 1; j <= i; j++) {
+    process.stdout.write("* ");
+  }
+  console.log()
+}
+
+/*
+ 1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5 */
+
+for (let i = 1 ; i<=5 ; i++){
+  for(let j = 1 ; j<= i ; j++){
+    process.stdout.write(j + " " )
+  }
+  console.log()
+}
+
+/* 
+A
+A B
+A B C
+A B C D
+A B C D E */
+for (let i = 1; i<=5 ; i++){
+  for(let j = 1; j<=i ; j++){
+    process.stdout.write(String.fromCharCode(64 + j) + " ")
+  }
+  console.log()
+}
+/* 
+* * * * *
+* * * *
+* * *
+* *
+*   
+ 
+*/
+
+for(i = 5 ; i>=1 ; i--){
+  for(j = 1; j<=i ; j++){
+    process.stdout.write("* ")
+  }
+  console.log()
+}
+/* 
+         *
+       * *
+     * * *
+   * * * *
+ * * * * *
+ */
