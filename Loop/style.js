@@ -287,3 +287,69 @@ for(i = 5 ; i>=1 ; i--){
    * * * *
  * * * * *
  */
+
+for(let i = 1; i<=5 ; i++){
+    for(let j = 1; j<=5-i; j++){
+        process.stdout.write("  ") // Two space for the mirror right angle triangle
+        }
+    for(let z = 1; z<=i; z++){
+        process.stdout.write("* ")
+    }
+    console.log()
+}
+/* 
+     *
+    * *
+   * * *
+  * * * *
+ * * * * *
+*/
+for(let i = 1; i<=5 ; i++){
+    for(let j = 1; j<=5-i; j++){
+        process.stdout.write(" ") // Only one space for pyramid
+        }
+    for(let z = 1; z<=i; z++){
+        process.stdout.write("* ")
+    }
+    console.log();
+}
+
+// The reason that single space can create pyamid and double space and create mirror right angle triangle is that when we print pattern like * * * * * ite actually is *_*_*_*_* so after every space there is a start and if we have to print       *  this star is actauly is _ _ _ _ _ _ _ _* there are actually 8 space before the actual star so thats why we need 2 space to recreate actual inverted right angle triangle 
+
+/* 
+ *       *
+  *     *
+   *   *
+    * *
+     *
+
+*/
+for (let i = 1 ; i<=5 ; i++){
+    for(let k = 1; k<=i ; k++){
+        process.stdout.write(" ")
+    }
+       process.stdout.write("* ")     
+    for(let h = 1 ; h<=4-i ; h++){
+        process.stdout.write("  ")
+    }
+    if (i !== 5){
+       process.stdout.write("*")     
+    }
+    console.log();
+}
+/* 
+*   *
+ * *
+  *
+ * *
+*   *
+*/
+for (let i = 1 ; i<=5 ; i++){
+    for (let j = 1; j<= 5 ; j++){
+        if(i+j === 6 || i===j){
+            process.stdout.write("*")
+        }
+        else {process.stdout.write(" ")}
+    }
+    console.log()
+}
